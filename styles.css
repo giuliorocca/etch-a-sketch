@@ -1,9 +1,18 @@
 #container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(16, 40px);
+    grid-template-rows: repeat(16, 40px);
+    width: 640px;   //40px per square * 16 squares each row
+    height: auto;
+    border: solid;
+    border-width: 4px;
+    border-color: black;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.horizontalBox, .verticalBox {
+
+.square {
     border-style: solid;
     border-width: 1px;
     border-color: black;

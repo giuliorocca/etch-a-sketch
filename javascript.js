@@ -1,26 +1,45 @@
-let numHorizontalDivs = 4;
-let numVerticalDivs = 8;
 const container = document.getElementById('container');
+const square = document.getElementsByClassName('square');
 
-// Create horizontally distributed divs for desired grid size
-function createHorizontalDivs (numHorizontalDivs) {
-    for (i = numHorizontalDivs; i > 0; i--) {
-        const div = document.createElement('div');
-        div.textContent = 'I am Horiz Div';
-        div.setAttribute('class', 'horizontalBox');
-        container.appendChild(div);    
-    }
-}
+numRows = 16;
+numColumns = 16;
 
-// Create vertically distributed divs for desired grid size
-function createVerticalDivs(numVerticalDivs) {
-    for (i = numVerticalDivs; i > 0; i--) {
+// Create divs and append them to the container div
+// The container div is set to display: grid so it will
+// automatically arrange the new divs into a grid as specified in CSS
+function createGrid () {
+    for (let i = 0; i < numRows*numColumns; i++) {
         const div = document.createElement('div');
-        div.textContent = 'I am Vert Div';
-        div.setAttribute('class','verticalBox');
+        div.classList.add('square');
         container.appendChild(div);
     }
 }
 
-createHorizontalDivs(numHorizontalDivs);
-createVerticalDivs(numVerticalDivs); 
+square.addEventListener('mouseover', () => {
+    square.style.backgroundColor = 'red';
+    setTimeout(() => {
+        square.style.backgroundColor = '';
+    }, 2000);
+});
+
+
+
+// function createGrid (numRows, numColumns) {
+    
+//     // Create horizontally distributed divs ('rows') for desired grid size
+//     for (i = 0; i < numRows; i++) {
+//         const rowdiv = document.createElement('div');
+//         rowdiv.textContent = 'I am Horiz Div';
+//         rowdiv.setAttribute('class', 'row');
+//         container.appendChild(rowdiv);    
+//     }
+//         // Create vertically distributed divs ('columns') for desired grid size
+//         for (i = 0; i < numColumns; i++) {
+//             const columndiv = document.createElement('div');
+//             columndiv.textContent = 'I am Vert Div';
+//             columndiv.setAttribute('class', 'column');
+//             rowdiv.appendChild(columndiv);
+//         }
+// }
+
+createGrid(numRows, numColumns);

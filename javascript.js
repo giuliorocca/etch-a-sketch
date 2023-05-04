@@ -1,12 +1,26 @@
-numHorizontalDivs = alert('how many horizontal divs you want?')
+let numHorizontalDivs = 4;
+let numVerticalDivs = 8;
+const container = document.getElementById('container');
 
 // Create horizontally distributed divs for desired grid size
 function createHorizontalDivs (numHorizontalDivs) {
-    for (i = numHorizontalDivs; i >= 0; i--) {
+    for (i = numHorizontalDivs; i > 0; i--) {
         const div = document.createElement('div');
-        div.textContent = 'I am Div';
+        div.textContent = 'I am Horiz Div';
+        div.setAttribute('class', 'gridBox');
         container.appendChild(div);    
     }
 }
 
 // Create vertically distributed divs for desired grid size
+function createVerticalDivs(numVerticalDivs) {
+    for (i = numVerticalDivs; i > 0; i--) {
+        const div = document.createElement('div');
+        div.textContent = 'I am Vert Div';
+        div.setAttribute('class','gridBox');
+        container.appendChild(div);
+    }
+}
+
+createHorizontalDivs(numHorizontalDivs);
+createVerticalDivs(numVerticalDivs); 

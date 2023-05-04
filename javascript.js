@@ -1,5 +1,6 @@
-// Initialize HTML variable for container
+// Initialize HTML element variables
 const container = document.getElementById("container");
+let squares;
 
 // Initialize grid size
 const numRows = 16;
@@ -13,18 +14,20 @@ function createGrid (numRows, numColumns) {
         div.classList.add('square');
         container.appendChild(div);
     }
+  // Populates the 'squares' variable with all the HTML elements
+  // tagged with the "square" class created above
+  squares = document.getElementsByClassName("square");
 }
 
 createGrid(numRows, numColumns);
 
 // Loop through all the HTML elements in squares, which have the "square" class
 // and add a mouseover EventListener to each of them
-let squares = document.getElementsByClassName("square");
 for (let i = 0; i < squares.length; i++) {
     squares[i].addEventListener("mouseover", function () {
       this.style.backgroundColor = "red";
       setTimeout(() => {
         this.style.backgroundColor = "";
-      }, 1000);
+      }, 800);
     });
 }

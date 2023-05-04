@@ -7,7 +7,7 @@ function createHorizontalDivs (numHorizontalDivs) {
     for (i = numHorizontalDivs; i > 0; i--) {
         const div = document.createElement('div');
         div.textContent = 'I am Horiz Div';
-        div.setAttribute('class', 'gridBox');
+        div.setAttribute('class', 'horizontalBox');
         container.appendChild(div);    
     }
 }
@@ -17,7 +17,7 @@ function createVerticalDivs(numVerticalDivs) {
     for (i = numVerticalDivs; i > 0; i--) {
         const div = document.createElement('div');
         div.textContent = 'I am Vert Div';
-        div.setAttribute('class','gridBox');
+        div.setAttribute('class','verticalBox');
         container.appendChild(div);
     }
 }

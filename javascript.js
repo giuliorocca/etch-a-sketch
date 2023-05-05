@@ -28,6 +28,6 @@ for (let i = 0; i < squares.length; i++) {
       this.style.backgroundColor = "rgb(201, 167, 255)";
       setTimeout(() => {
         this.style.backgroundColor = "";
-      }, 500);
+      }, 600);
     });
 }

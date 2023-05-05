@@ -24,11 +24,11 @@ p {
 }
 
 /* Initialize grid with a size of 16x16 */
-/* JS will update grid size */
+/* JS will update grid columns and rows per user selection */
 #gridContainer {
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
+    grid-template-columns: repeat(var(--numColumns), 1fr);
+    grid-template-rows: repeat(var(--numRows), 1fr);
     width: 640px;
     height: auto;
     border: solid;

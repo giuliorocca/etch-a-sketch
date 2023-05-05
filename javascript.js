@@ -4,12 +4,16 @@ const gridSize = document.getElementById("gridUserSelection");
 let squares;
 
 // Initialize grid size dimensions based on default drop-down menu selection
-let numRows = gridSize.value;
-let numColumns = gridSize.value;
+let numRows = parseInt(gridSize.value);
+let numColumns = parseInt(gridSize.value);
 
 // Create divs that form a grid of rows and columns
 // Create within "gridContainer" div, which has "display: grid property"
 function createGrid (numRows, numColumns) {
+
+   // Clear the grid container's child elements (all the div squares created)
+   gridContainer.innerHTML = "";
+
     for (let i = 0; i < numRows * numColumns; i++) {
         const div = document.createElement('div');
         div.classList.add('square');
@@ -21,7 +25,6 @@ function createGrid (numRows, numColumns) {
 }
 
 createGrid(numRows, numColumns);
-
 // Loop through all the HTML elements in squares, which have the "square" class
 // and add a mouseover EventListener to each of them
 for (let i = 0; i < squares.length; i++) {
@@ -36,11 +39,13 @@ for (let i = 0; i < squares.length; i++) {
 // Add an event listener to the drop-down menu where user selects grid size
 gridSize.addEventListener("change", () => {
   // Update numRows and numColumns variables with new grid size
-  numRows = gridSize.value;
-  numColumns = gridSize.value;
+  numRows = parseInt(gridSize.value);
+  numColumns = parseInt(gridSize.value);
+
   // Set the CSS custom properties for the grid size
   gridContainer.style.setProperty("--numColumns", numColumns);
   gridContainer.style.setProperty("--numRows", numRows);
+
   // Call the createGrid function with the new values
   createGrid(numRows, numColumns);
-  });
+});

@@ -1,4 +1,25 @@
-#container {
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    margin: 0px;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+}
+
+label, button, option, select {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+#gridContainer {
     display: grid;
     grid-template-columns: repeat(16, 40px);
     grid-template-rows: repeat(16, 40px);
@@ -9,26 +30,44 @@
     border-color: black;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
 }
 
+#title {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#gridsizing {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom:30px;
+}
+
+#footer {
+    margin-top: auto;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+    font-size: 18px;
+    align-items: center;
+}
+
+#github {
+    height: 30px; 
+    width: 30px;
+}
+
+#author {
+    margin-bottom: 5px;
+}
 
 .square {
     border-style: solid;
     border-width: 1px;
     border-color: black;
-    background-color: rgb(197, 255, 217);
-}
-
-#gridsizing {
-    text-align: center;
-    margin: 20px;
-}
-
-label, button {
-    font-size: 20px;
-    margin-top: 20px;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(222, 255, 227)
 }

@@ -9,14 +9,26 @@
     <title>Etch a Sketch</title>
 </head>
 <body>
-    <div id="gridsizing">
-        <label for="gridwidth">Grid width: </label>
-        <input type="text" name="gridwidth" id="gridwidth"><br>
-        <label for="gridheight">Grid height: </label>
-        <input type="text" name="gridheight" id="gridheight"><br>
-        <button type="button">Resize!</button>
+    
+    <div id="title">
+        Etch a Sketch
     </div>
-    <div id="container">
+    
+    <div id="gridsizing">
+        <label for="gridsizes">Choose a gride size:</label><br>
+        <select name="grid" id="grid">
+        <option value="16x16">16x16</option>
+        <option value="32x32">32x32</option>
+        <option value="64x64">64x64</option>
+        </select>
+    </div>
+    
+    <div id="gridContainer">
+    </div>
+
+    <div id="footer">
+        <p id="author">Made by Giulio Rocca</p>
+        <p><a href="https://github.com/giuliorocca" target="_blank"><img id="github" src="github.png" href="https://github.com/giuliorocca"></a></p>
     </div>
     
 </body>

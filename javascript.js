@@ -8,10 +8,10 @@ let numRows = parseInt(gridSize.value);
 let numColumns = parseInt(gridSize.value);
 
 // Create divs that form a grid of rows and columns
-// Create within "gridContainer" div, which has "display: grid property"
+// Create within "gridContainer" div, which has the "display: grid property"
 function createGrid (numRows, numColumns) {
 
-   // Clear the grid container's child elements (all the div squares created)
+   // Clear the grid, delete the container's child elements (the div squares created)
    gridContainer.innerHTML = "";
 
     for (let i = 0; i < numRows * numColumns; i++) {
@@ -20,7 +20,7 @@ function createGrid (numRows, numColumns) {
         gridContainer.appendChild(div);
     }
   // Populates the 'squares' variable with all the HTML elements
-  // tagged with the "square" class created above
+  // tagged with the 'square' class created above
   squares = document.getElementsByClassName("square");
 }
 

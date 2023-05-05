@@ -23,6 +23,12 @@ p {
     padding: 0px;
 }
 
+/* Initialize the CSS variables for the grid */
+:root {
+  --numColumns: 16;
+  --numRows: 16;
+}
+
 /* Initialize grid with a size of 16x16 */
 /* JS will update grid columns and rows per user selection */
 #gridContainer {

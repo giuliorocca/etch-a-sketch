@@ -22,19 +22,20 @@ function createGrid (numRows, numColumns) {
   // Populate the 'squares' variable with all the HTML elements
   // tagged with the 'square' class created above
   squares = document.getElementsByClassName("square");
+
+  // Loop through all the HTML elements in squares, which have the "square" class
+// and add a mouseover EventListener to each of them
+    for (let i = 0; i < squares.length; i++) {
+      squares[i].addEventListener("mouseover", function () {
+        this.style.backgroundColor = "rgb(201, 167, 255)";
+        setTimeout(() => {
+          this.style.backgroundColor = "";
+        }, 800);
+      });
+    }
 }
 
 createGrid(numRows, numColumns);
-// Loop through all the HTML elements in squares, which have the "square" class
-// and add a mouseover EventListener to each of them
-for (let i = 0; i < squares.length; i++) {
-    squares[i].addEventListener("mouseover", function () {
-      this.style.backgroundColor = "rgb(201, 167, 255)";
-      setTimeout(() => {
-        this.style.backgroundColor = "";
-      }, 800);
-    });
-}
 
 // Add an event listener to the drop-down menu where user selects grid size
 gridSize.addEventListener("change", () => {

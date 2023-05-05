@@ -1,10 +1,10 @@
 // Initialize HTML element variables
 const gridContainer = document.getElementById("gridContainer");
+const gridSize = document.getElementById("gridUserSelection");
+const numRows = gridSize.value;
+const numColumns = gridSize.value;
 let squares;
-
-// Initialize grid size
-const numRows = 16;
-const numColumns = 16;
+console.log(numRows);
 
 // Create divs that form a grid of rows and columns of divs/cells
 // Create within "gridContainer" div, which has "display: grid property"

@@ -23,7 +23,7 @@ p {
     padding: 0px;
 }
 
-/* Initialize the CSS variables for the grid */
+/* Initialize the CSS variables for #gridContainer */
 :root {
   --numColumns: 16;
   --numRows: 16;
